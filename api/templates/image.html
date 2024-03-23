@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="1">
+    <meta http-equiv="refresh" content="2">
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        .main{
+
+        .main {
             background: antiquewhite;
             height: 100vh;
             width: 100%;
@@ -18,14 +20,32 @@
             display: flex;
             flex-direction: column;
         }
-        img{
+
+        @media only screen and (min-width: 600px) {
+            h1{
+                color: #7d2ae8;
+            }
+            img {
+                height: 60%;
+                width: 80%;
+                border: 2px solid black;
+                border-radius: 15px;
+                object-fit: fill;
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            img {
             border: 2px solid black;
             border-radius: 15px;
             height: 80%;
-            width: 40%;
-            object-fit: contain;
+            width: 60%;
+            object-fit: scale-down;
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
         }
+        }
+
         button {
             font-size: 2rem;
             margin: 15px;
@@ -124,12 +144,14 @@
     </style>
     <title>Project Waifu</title>
 </head>
+
 <body>
     <div class="main">
-        <h1 style="margin-bottom: 10px;">Waifu image:</h1>
-        <img id="imageUrl" src="{{ image_url }}" alt="Image from nekos.pro">
+        <h1>Waifu image:</h1>
+        <img id="imageUrl" src="{{ image_url }}" alt="Image">
         <button onclick="window.location.href='/'">Go Back</button>
     </div>
-    
+
 </body>
+
 </html>
