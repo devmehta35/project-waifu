@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="2">
+    <!-- <meta http-equiv="refresh" content="2"> -->
+
     <style>
         * {
             margin: 0;
@@ -22,9 +23,10 @@
         }
 
         @media only screen and (min-width: 600px) {
-            h1{
+            h1 {
                 color: #7d2ae8;
             }
+
             img {
                 height: 60%;
                 width: 80%;
@@ -37,13 +39,13 @@
 
         @media only screen and (min-width: 992px) {
             img {
-            border: 2px solid black;
-            border-radius: 15px;
-            height: 80%;
-            width: 60%;
-            object-fit: scale-down;
-            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-        }
+                border: 2px solid black;
+                border-radius: 15px;
+                height: 80%;
+                width: 60%;
+                object-fit: scale-down;
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            }
         }
 
         button {
@@ -142,6 +144,11 @@
             }
         }
     </style>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <title>Project Waifu</title>
 </head>
 
@@ -153,13 +160,23 @@
     </div>
 
 </body>
+
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            location.reload();
+        }, 0);
+    });
+</script>
+
 <script>
     window.addEventListener(
-      "contextmenu",
-      function (e) {
-        e.preventDefault();
-      },
-      false
+        "contextmenu",
+        function (e) {
+            e.preventDefault();
+        },
+        false
     );
-  </script>
+</script>
+
 </html>
