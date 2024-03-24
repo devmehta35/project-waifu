@@ -146,6 +146,3 @@ def irl_random():
     asyncio.set_event_loop(loop)
     image_url = loop.run_until_complete(get_image_url('https://nekos.pro/api/irl-random'))
     return render_template('image.html', image_url=image_url)
-
-if __name__ == '__main__':
-    app.run(debug=True)
